@@ -1,0 +1,38 @@
+{
+  "name": "whatsapp-desktop",
+  "version": "1.0.0",
+  "description": "WhatsApp Web wrapped in Electron",
+  "main": "main.js",
+  "author": "Leerot <leerot@localhost.local>",
+  "homepage": "https://github.com/leerot/app-whatsapp",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --linux AppImage deb"
+  },
+  "build": {
+    "appId": "com.app.whatsapp",
+    "productName": "Whatsapp Desktop",
+    "icon": "icons/icon.png",
+    "directories": {
+      "output": "dist"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Network",
+      "maintainer": "Leerot <leerot@localhost.local>"
+    }
+  },
+  "devDependencies": {
+    "electron": "^39.2.4",
+    "electron-builder": "^24.13.0"
+  },
+  "volta": {
+    "node": "20.19.6"
+  },
+  "dependencies": {
+    "electron-context-menu": "^4.1.1"
+  }
+}
